@@ -28,6 +28,10 @@ function getIngredientsHtml(recipe) {
 function renderRecipe(recipe) {
   // Store the current recipe for remixing
   currentRecipe = recipe;
+  // Clear any previous remix so user starts fresh
+  if (remixOutput) {
+    remixOutput.textContent = "";
+  }
   
   recipeDisplay.innerHTML = `
     <div class="recipe-title-row">
